@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html ng-app="AngularJs-Menu">
+<head>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <title>AngularJS Basic Menu Application</title>
+    <style>
+        #body{
+            background-color:aliceblue;
+        }
+        .tab{
+            width:100%;
+            height:300px;
+            border:2px solid #dddddd;
+            background-color:antiquewhite;
+        }
+        a{
+           display:block!important;
+        }
+        li{
+            list-style:none;
+        }
+        h1{
+            text-align:center;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color:burlywood;
+        }
+
+
+    </style>
+
+</head>
+<body id="body">
+
+    <div class="container"  ng-controller="Controller">
+
+        <ul>
+            <li ng-repeat="item in items">
+                <a href="javascript:" class="btn btn-danger" ng-click="aValue($index + 1)">Content Tab -{{$index + 1}}</a>
+                <div class="tab" ng-show="tabValue($index + 1)">
+                    <h1>{{item}}</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec semper molestie massa, vitae ultricies tellus egestas at. Nulla sed interdum neque. In molestie interdum orci vitae porttitor. Ut bibendum, nulla sed commodo convallis, risus ex porttitor purus, nec pharetra lectus nisi eget libero. Nullam in ex egestas, elementum nisi id, cursus arcu. Maecenas turpis tellus, congue sit amet odio in, dignissim interdum neque. Vivamus quis arcu purus. Proin luctus, elit non eleifend luctus, risus elit vehicula nisl, quis ultricies lacus neque vel justo. In volutpat sagittis dictum. Aliquam erat volutpat. Mauris accumsan porta sem, ut cursus purus volutpat eu. Aliquam iaculis ullamcorper metus non lobortis. Pellentesque a diam id nulla ultricies accumsan. Ut quis orci lacinia, hendrerit purus at, maximus ligula. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>
